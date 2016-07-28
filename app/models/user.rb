@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
   validates :first_name,    presence: true
   validates :last_name,     presence: true
 
+  has_many :posts
+
   def name
     return if first_name.blank? or last_name.blank?
     self.name = first_name + ' ' + last_name
