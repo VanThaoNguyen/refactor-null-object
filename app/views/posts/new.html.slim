@@ -1,5 +1,5 @@
 #posts-new-container
   .container
     p Create new Post
-    = render partial: 'posts/form', locals: { post: @post }
+    = render 'posts/form'
     = link_to 'Back', posts_path

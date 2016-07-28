@@ -1,5 +1,5 @@
 .posts-form-container
-  = simple_form_for post, url: posts_path do |f|
+  = simple_form_for @post do |f|
     = f.input :title
     = f.input :body
     = f.input :user, collection: User.all, include_blank: true
