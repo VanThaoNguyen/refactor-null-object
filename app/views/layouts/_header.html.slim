@@ -1,0 +1,15 @@
+.layouts-header-container
+    nav.navbar.navbar-default role="navigation" 
+      .container
+        .navbar-header
+          button.navbar-toggle.collapsed data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button" 
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand href="#"  Blog
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li = link_to "Posts", posts_path
+          ul.nav.navbar-nav.pull-right
+            = render "shared/#{current_user.class.name.underscore}_nav"

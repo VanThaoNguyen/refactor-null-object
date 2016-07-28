@@ -14,6 +14,7 @@ gem 'slim'
 gem 'bootstrap-sass'
 gem 'simple_form'
 gem 'devise'
+gem 'seedbank'
 
 group :development, :test do
   gem 'byebug'

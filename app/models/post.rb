@@ -3,4 +3,8 @@ class Post < ActiveRecord::Base
   validates :body,  presence: true
 
   belongs_to :user
+
+  def user
+    super || GuestUser.new
+  end
 end

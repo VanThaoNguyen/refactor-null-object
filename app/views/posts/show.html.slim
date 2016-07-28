@@ -1,0 +1,12 @@
+#posts-show-container.container
+  p#notice
+  h1
+    = @post.title
+  p 
+    | Written by #{@post.user.name} 
+  div 
+    = simple_format @post.body
+  br
+  = link_to 'Edit', edit_post_path(@post)
+  br
+  = link_to 'Back', posts_path

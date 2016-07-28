@@ -10,7 +10,10 @@ class User < ActiveRecord::Base
   has_many :posts
 
   def name
-    return if first_name.blank? or last_name.blank?
-    self.name = first_name + ' ' + last_name
+    if last_name.blank?
+      first_name
+    else
+      first_name + " " + last_name
+    end
   end
 end
